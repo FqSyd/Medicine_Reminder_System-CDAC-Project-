@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Medicine Reminder System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>💊 Medicine Reminder System</h1>
+            <div class="form-grid">
+                <input id="name" placeholder="Patient Name">
+                <input id="email" placeholder="Email">
+                <input id="medicine" placeholder="Medicine Name">
+                <input id="dosage" placeholder="Dosage">
+
+                <div style="display:flex; gap:10px;">
+                    <input id="time" type="time" style="flex:1;">
+                    <select id="ampm">
+                        <option value="AM">AM</option>
+                        <option value="PM">PM</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="field-label">Prescription Date</label>
+                    <input id="prescription_date" type="date">
+                </div>
+
+                <div>
+                    <label class="field-label">Expiry Date</label>
+                    <input id="expiry_date" type="date">
+                </div>
+            </div>
+
+            <button onclick="addMedicine()">Add Medicine</button>
+
+            <div id="loadingContainer" style="display:none; margin-top:15px; color:#38bdf8;">
+                Saving...
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
