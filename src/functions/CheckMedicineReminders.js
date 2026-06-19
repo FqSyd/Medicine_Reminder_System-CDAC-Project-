@@ -82,7 +82,7 @@ app.timer("checkMedicineReminders", {
                             from: process.env.GMAIL_USER,
                             to: m.email,
                             subject: "⚠️ Medicine Expiring Tomorrow",
-                            text: `Warning: Your medicine (${m.medicine}) will expire tomorrow. Please arrange a replacement.`
+                            text: `Warning: ${m.patient_name || 'Patient'}, your medicine (${m.medicine}) will expire tomorrow. Please arrange a replacement.`
                         });
                         m.lastExpiryReminderDate = todayStr; // Locks alert for today
                         hasUpdates = true;
@@ -98,7 +98,7 @@ app.timer("checkMedicineReminders", {
                             from: process.env.GMAIL_USER,
                             to: m.email,
                             subject: "❌ Medicine Expired Today",
-                            text: `Alert: Your medicine (${m.medicine}) has expired today. Do not consume it.`
+                            text: `Alert: ${m.patient_name || 'Patient'}, your medicine (${m.medicine}) has expired today. Do not consume it.`
                         });
                         m.lastExpiredTodayDate = todayStr; // Locks alert for today
                         hasUpdates = true;
