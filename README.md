@@ -1,10 +1,10 @@
-💊 Smart Medicine Reminder & Expiry Tracker System (Project Summary)
+# 💊 Smart Medicine Reminder & Expiry Tracker System (Project Summary)
 
 An automated, serverless healthcare solution designed to help patients manage daily medication timings and prevent the accidental consumption of expired drugs. 
 
 ---
 
-⚡ The Project Gist
+## ⚡ The Project Gist
 Instead of manually checking pill bottles, a patient registers their medicine details once through a modern web app portal. The system takes over completely:
 * Sends a **Medicine Intake Reminder** email exactly at the user's scheduled time (e.g., 7:30 PM).
 * Sends a **Warning Email at 9:00 AM exactly 1 day prior to expiration**.
